@@ -4,39 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hockey's</title>
+    <!-- Daisy UI nd Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Daisy UI nd Tailwind CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom Styles -->
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/47b7bac824.js" crossorigin="anonymous"></script>
+    <!-- Tailwind Custom Styles -->
     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
-                clifford: '#da373d',
+                clifford: '#FF4240',
+                'text-primary-red': '#FF4240',
               }
             }
           }
         }
       </script>
-    <!-- Styles -->
+    <!-- Custom Styles (Tailwind Custom styles doesn't working) -->
     <style>
         .font-primary{
             font-family: 'Manrope', sans-serif;
     }
+    .text-primary-color{
+      color: #FF4240;
+    }
+    .text-dark-color{
+      color: #131318;;
+    }
+    .text-gray{
+      color: #13131899;
+    }
+    .primary-bg{
+      background-color: #FF4240;
+    }
     </style>
 </head>
 <body class="font-primary">
-    <header>
-        <h1 class="text-red-500 font-bold text-7xl">This is header</h1>
+    <section class="container mx-auto">
+      <header>
+        <!-- Navbar -->
+        <nav>
+          <div class="navbar bg-base-100 space-y-4">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Pages</a></li>
+                  <li><a>Contact</a></li>
+                </ul>
+              </div>
+              <a class="text-4xl text-dark-color font-bold cursor-pointer">Hockey<span class="text-primary-color">’</span>s</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li ><a class="text-primary-color font-bold">Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Pages</a></li>
+                  <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <i class="fa-solid bg-red-700 fa-magnifying-glass"></i>
+              <a class="btn primary-bg  text-white font-semibold text-xl">Get Ticket</a>
+            </div>
+          </div>
+        </nav>
     </header>
     <main>
 
     </main>
+    </section>
     <footer>
 
     </footer>
